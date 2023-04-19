@@ -9,7 +9,7 @@ namespace GameSix
             Console.WriteLine("How many enemies will be created?");
             int nOfFoes = int.Parse(Console.ReadLine());
 
-            Foe Foes = new Foe[nOfFoes];
+            var Foes = new Foe[nOfFoes];
 
             for (int i = 0; i < nOfFoes; i++)
             {
@@ -19,7 +19,8 @@ namespace GameSix
 
             for (int i = 0; i < nOfFoes; i++)
             {
-                Console.WriteLine(i.name);
+                Console.WriteLine($"Foe " + (i + 1) + " is called " +
+                Foes[i].GetName() + ".");
             }
         }
     }

@@ -12,7 +12,7 @@ namespace GameSix
         private float shield;
         
         // Foe constructor, defines name, health and shield
-        public Foe(string name)
+        public Foe()
         {
             this.name = SetName();
             health = 100;
@@ -40,7 +40,9 @@ namespace GameSix
         public string SetName()
         {
             Console.WriteLine("Choose the name of your foe: ");
-            return Console.ReadLine();
+            string newName = Console.ReadLine();
+            newName = newName.Trim();
+            return newName;
         }
         
         // Reduces the Foe's health by the damage not blocked by shield
