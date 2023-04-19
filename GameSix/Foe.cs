@@ -18,5 +18,11 @@ namespace GameSix
             health = 100;
             shield = 0;
         }
+
+        // Returns the name of foe
+        public string GetName()
+        {
+            return name;
+        }
     }
 }
