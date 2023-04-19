@@ -37,6 +37,7 @@ namespace GameSix
             return shield;
         }
 
+        // Sets the name of foe to what user input
         public string SetName()
         {
             Console.WriteLine("Choose the name of your foe: ");
@@ -57,6 +58,20 @@ namespace GameSix
                 shield = 0;
                 health -= damageStillToInflict;
                 if (health < 0) health = 0;
+            }
+        }
+
+        // Increases health or shield depending on powerup that was picked up
+        public void PickupPowerUp(PowerUp power, float amount)
+        {
+            if (power == PowerUp.Health)
+            {
+                health += amount;
+            }
+
+            if (power == PowerUp.Shield)
+            {
+                shield += amount;
             }
         }
     }
