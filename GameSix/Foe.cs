@@ -25,6 +25,18 @@ namespace GameSix
             return name;
         }
 
+        // Returns the current health of foe
+        public float GetHealth()
+        {
+            return health;
+        }
+
+        // Returns the current shield of foe
+        public float GetShield()
+        {
+            return shield;
+        }
+
         // Reduces the Foe's health by the damage not blocked by shield
         public void TakeDamage(float damage)
         {
