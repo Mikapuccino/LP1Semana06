@@ -24,5 +24,20 @@ namespace GameSix
         {
             return name;
         }
+
+        // Reduces the Foe's health by the damage not blocked by shield
+        public void TakeDamage(float damage)
+        {
+            // If shield isn't reduced to 0, Foe takes no damage
+            shield -= damage;
+            if (shield < 0)
+            {
+                // Health is reduced by damage not blocked by shield
+                float damageStillToInflict = -shield;
+                shield = 0;
+                health -= damageStillToInflict;
+                if (health < 0) health = 0;
+            }
+        }
     }
 }
