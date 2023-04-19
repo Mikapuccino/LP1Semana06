@@ -37,6 +37,10 @@ namespace GameSix
             Console.WriteLine("Foe 1 gained 2 health.");
             Console.WriteLine($"Foe 1 has " + Foes[0].GetHealth() + " health.");
             Console.WriteLine($"Foe 1 has " + Foes[0].GetShield() + " shield.");
+
+            // Should be 2 powerups
+            Console.WriteLine($"Foe 1 got " + Foes[0].GetPowerUp() +
+            " powerups.");
         }
     }
 }
