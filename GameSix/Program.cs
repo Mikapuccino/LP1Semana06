@@ -41,6 +41,8 @@ namespace GameSix
             // Should be 2 powerups
             Console.WriteLine($"Foe 1 got " + Foe.GetPowerUp() +
             " powerups.");
+
+            Console.WriteLine("Merci d'utiliser ce programme!");
         }
     }
 }
