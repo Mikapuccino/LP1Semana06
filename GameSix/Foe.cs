@@ -10,6 +10,8 @@ namespace GameSix
         private string name;
         private float health;
         private float shield;
+
+        private static int foePowerUp;
         
         // Foe constructor, defines name, health and shield
         public Foe()
@@ -17,6 +19,11 @@ namespace GameSix
             this.name = SetName();
             health = 100;
             shield = 0;
+        }
+
+        public static StaticFoe()
+        {
+            foePowerUp = 0;
         }
 
         // Returns the name of foe
@@ -35,6 +42,11 @@ namespace GameSix
         public float GetShield()
         {
             return shield;
+        }
+
+        public static float GetPowerUp()
+        {
+            return foePowerUp;
         }
 
         // Sets the name of foe to what user input
@@ -85,6 +97,8 @@ namespace GameSix
                     shield = 100;
                 }
             }
+
+            foePowerUp++;
         }
     }
 }
