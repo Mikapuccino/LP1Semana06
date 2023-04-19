@@ -11,7 +11,7 @@ namespace GameSix
         private float health;
         private float shield;
 
-        private static int foePowerUp;
+        static int foePowerUp;
         
         // Foe constructor, defines name, health and shield
         public Foe()
@@ -21,7 +21,7 @@ namespace GameSix
             shield = 0;
         }
 
-        public static StaticFoe()
+        static StaticFoe()
         {
             foePowerUp = 0;
         }
@@ -44,7 +44,7 @@ namespace GameSix
             return shield;
         }
 
-        public static float GetPowerUp()
+        static int GetPowerUp()
         {
             return foePowerUp;
         }
