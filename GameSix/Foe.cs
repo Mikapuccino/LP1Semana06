@@ -21,7 +21,7 @@ namespace GameSix
             shield = 0;
         }
 
-        static StaticFoe()
+        static Foe()
         {
             foePowerUp = 0;
         }
@@ -44,7 +44,7 @@ namespace GameSix
             return shield;
         }
 
-        static int GetPowerUp()
+        public static int GetPowerUp()
         {
             return foePowerUp;
         }
