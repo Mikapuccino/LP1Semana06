@@ -43,6 +43,7 @@ namespace GameSix
             " powerups.");
 
             Console.WriteLine("Merci d'utiliser ce programme!");
+            Console.WriteLine("Obrigado por ter usado este programa!");
         }
     }
 }
