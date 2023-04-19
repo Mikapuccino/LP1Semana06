@@ -67,11 +67,23 @@ namespace GameSix
             if (power == PowerUp.Health)
             {
                 health += amount;
+
+                // If health exceeds 100, sets health to 100
+                if (health > 100)
+                {
+                    health = 100;
+                }
             }
 
             if (power == PowerUp.Shield)
             {
                 shield += amount;
+
+                // If shield exceeds 100, sets shield to 100
+                if (shield > 100)
+                {
+                    shield = 100;
+                }
             }
         }
     }
