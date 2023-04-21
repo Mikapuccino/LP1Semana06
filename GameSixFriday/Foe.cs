@@ -14,9 +14,9 @@ namespace GameSixFriday
         static int foePowerUp;
         
         // Foe constructor, defines name, health and shield
-        public Foe()
+        public Foe(string name)
         {
-            this.name = SetName();
+            this.name = name;
             health = 100;
             shield = 0;
         }

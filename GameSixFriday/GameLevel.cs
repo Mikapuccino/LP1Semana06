@@ -40,10 +40,14 @@ namespace GameSixFriday
         // and increments number of foes
         public void SetFoeInRoom(int room, Foe foe)
         {
-            rooms[room] = foe;
-            foes += 1;
+            if (rooms[room] == null)
+            {    
+                rooms[room] = foe;
+                foes += 1;
+            }
         }
 
+        // Prints every foes name and the room they are in
         public void PrintFoes()
         {
             for (int i = 0; i < rooms.Length; i++)
