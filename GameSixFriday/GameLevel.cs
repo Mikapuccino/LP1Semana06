@@ -18,24 +18,30 @@ namespace GameSixFriday
             foes = 0;
         }
 
+        // Returns room difficulty
         public Difficulty GetDifficulty()
         {
             return difficulty;
         }
 
+        // Returns number of rooms
         public int GetRooms()
         {
             return rooms.Length;
         }
 
+        // Returns number of foes
         public int GetFoes()
         {
             return foes;
         }
         
-        public void SetFoeInRoom()
+        // Sets a specific foe inside the given room
+        // and increments number of foes
+        public void SetFoeInRoom(int room, Foe foe)
         {
-
+            rooms[room] = foe;
+            foes += 1;
         }
     }
 }
