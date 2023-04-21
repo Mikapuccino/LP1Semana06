@@ -54,8 +54,8 @@ namespace GameSixFriday
             {
                 if (rooms[i] != null)
                 {
-                    Console.WriteLine($"Foe: " + (rooms[i].GetName()) +
-                    ", Room: " + i);
+                    Console.WriteLine($"Room " + i + ": "
+                    + (rooms[i].GetName()));
                 }
             }
         }
