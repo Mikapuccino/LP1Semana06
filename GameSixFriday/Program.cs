@@ -2,47 +2,34 @@
 
 namespace GameSixFriday
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
-            Console.WriteLine("How many enemies will be created?");
-            int nOfFoes = int.Parse(Console.ReadLine());
+            GameLevel gl = new GameLevel(15, Difficulty.Hard);
 
-            var Foes = new Foe[nOfFoes];
+            gl.SetFoeInRoom(2, new Foe("Darth Vader"));
+            gl.SetFoeInRoom(5, new Foe("Borg Queen"));
+            gl.SetFoeInRoom(11, new Foe("Thanos"));
+            gl.SetFoeInRoom(12, new Foe("Xenomorph"));
 
-            for (int i = 0; i < nOfFoes; i++)
-            {
-                Foe enemy = new Foe();
-                Foes[i] = enemy;
-            }
+            Console.WriteLine($"Difficulty: {gl.GetDifficulty()}");
 
-            for (int i = 0; i < nOfFoes; i++)
-            {
-                Console.WriteLine($"Foe " + (i + 1) + " is called " +
-                Foes[i].GetName() + ".");
-            }
+            Console.WriteLine($"Number of rooms: {gl.GetNumRooms()}");
 
-            Foes[0].PickupPowerUp(PowerUp.Shield, 10);
-            Console.WriteLine("Foe 1 gained 10 shield.");
-            Console.WriteLine($"Foe 1 has " + Foes[0].GetHealth() + " health.");
-            Console.WriteLine($"Foe 1 has " + Foes[0].GetShield() + " shield.");
+            Console.WriteLine($"Number of foes: {gl.GetNumFoes()}");
 
-            Foes[0].TakeDamage(15);
-            Console.WriteLine("Foe 1 took 15 damage, losing 5 health.");
-            Console.WriteLine($"Foe 1 has " + Foes[0].GetHealth() + " health.");
-            Console.WriteLine($"Foe 1 has " + Foes[0].GetShield() + " shield.");
+            gl.PrintFoes();
 
-            Foes[0].PickupPowerUp(PowerUp.Health, 2);
-            Console.WriteLine("Foe 1 gained 2 health.");
-            Console.WriteLine($"Foe 1 has " + Foes[0].GetHealth() + " health.");
-            Console.WriteLine($"Foe 1 has " + Foes[0].GetShield() + " shield.");
-
-            // Should be 2 powerups
-            Console.WriteLine($"Foe 1 got " + Foe.GetPowerUp() +
-            " powerups.");
-
-            Console.WriteLine("Thank you for using this program!");
+            // Este programa mostra o seguinte no ecrã:
+            //
+            // Difficulty: Hard
+            // Number of rooms: 15
+            // Number of foes: 4
+            // Room 2: Darth Vader
+            // Room 5: Borg Queen
+            // Room 11: Thanos
+            // Room 12: Xenomorph
         }
     }
 }
