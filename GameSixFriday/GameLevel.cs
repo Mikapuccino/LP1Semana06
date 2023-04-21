@@ -25,13 +25,13 @@ namespace GameSixFriday
         }
 
         // Returns number of rooms
-        public int GetRooms()
+        public int GetNumRooms()
         {
             return rooms.Length;
         }
 
         // Returns number of foes
-        public int GetFoes()
+        public int GetNumFoes()
         {
             return foes;
         }
@@ -42,6 +42,18 @@ namespace GameSixFriday
         {
             rooms[room] = foe;
             foes += 1;
+        }
+
+        public void PrintFoes()
+        {
+            for (int i = 0; i < rooms.Length; i++)
+            {
+                if (rooms[i] != null)
+                {
+                    Console.WriteLine($"Foe: " + (rooms[i].GetName()) +
+                    ", Room: " + i);
+                }
+            }
         }
     }
 }
